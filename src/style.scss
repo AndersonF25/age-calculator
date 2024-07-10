@@ -26,6 +26,9 @@
     padding: 20px;
     position: relative;
     overflow: hidden;
+    -webkit-box-shadow: 4px 3px 17px -8px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 4px 3px 17px -8px rgba(0, 0, 0, 1);
+    box-shadow: 4px 3px 17px -8px rgba(0, 0, 0, 1);
 
     @media (max-width: 750px) {
       max-width: 600px;
@@ -36,6 +39,9 @@
     }
     @media (max-width: 478px) {
       max-width: 340px;
+    }
+    @media (max-height: 640px) {
+      height: 600px;
     }
 
     .AgeDetails {
