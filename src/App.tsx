@@ -24,14 +24,12 @@ function App() {
     return { years: ageYears, months: ageMonths, days: ageDays };
   };
 
-  const date = new Date()
-  const atualDay = date.getDate() 
+  const date = new Date();
+  const atualDay = date.getDate();
   const atualMonth = date.getMonth() + 1;
   const atualYear = date.getFullYear();
 
-  console.log(atualDay)
-
-
+  console.log(atualDay);
 
   const [day, setDay] = useState<number>(atualDay);
   const [month, setMonth] = useState<number>(atualMonth);
@@ -53,7 +51,7 @@ function App() {
       <div className="wave wave3"></div>
       <div className="wave wave4"></div>
       <div className="content">
-        <div className="age">
+        <div className="AgeDetails">
           <div className="container-info">
             <label>Day</label>
             <input

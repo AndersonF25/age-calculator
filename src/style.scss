@@ -18,15 +18,27 @@
 
   .content {
     max-width: 740px;
-    width:  100%;
+    width: 100%;
     background-color: #fff;
     height: 650px;
     z-index: 20000;
     border-radius: 25px 25px 200px 25px;
     padding: 20px;
     position: relative;
+    overflow: hidden;
 
-    .age {
+    @media (max-width: 750px) {
+      max-width: 600px;
+      height: 590px;
+    }
+    @media (max-width: 750px) {
+      max-width: 450px;
+    }
+    @media (max-width: 478px) {
+      max-width: 340px;
+    }
+
+    .AgeDetails {
       width: 100%;
       display: flex;
       align-items: center;
@@ -34,7 +46,12 @@
       margin-top: 30px;
       margin-bottom: 40px;
 
+      @media (max-width: 750px) {
+        gap: 0;
+      }
+
       .container-info {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -54,6 +71,11 @@
           font-size: 1.6rem;
           padding-left: 9px;
           font-weight: 500;
+
+          @media (max-width: 478px) {
+            width: 84px;
+            font-size: 1.5rem;
+          }
         }
       }
     }
@@ -77,7 +99,14 @@
         align-items: flex-start;
         justify-content: center;
 
-        h3{
+        @media (max-width: 600px) {
+          height: 29vh;
+        }
+        @media (max-width: 380px) {
+          height: 33vh;
+        }
+
+        h3 {
           display: flex;
           gap: 9px;
           align-items: center;
@@ -86,13 +115,19 @@
           font-size: 4.9rem;
           font-weight: 700;
 
-          span{
+          @media (max-width: 750px) {
+            font-size: 4.5rem;
+          }
+          @media (max-width: 478px) {
+            font-size: 4rem;
+          }
+
+          span {
             color: #3586ff;
             font-weight: 800;
           }
         }
       }
-
     }
   }
 
@@ -102,6 +137,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     span {
       position: relative;
@@ -109,6 +145,13 @@
       width: 100%;
       display: flex;
       align-items: center;
+
+      @media (max-width: 750px) {
+        max-width: 75%;
+      }
+      @media (max-width: 478px) {
+        max-width: 68%;
+      }
     }
 
     span::before {
@@ -149,6 +192,11 @@
 
       &:hover {
         background-color: #1a5ab9;
+      }
+
+      @media (max-width: 750px) {
+        width: 70px;
+        height: 70px;
       }
     }
   }
