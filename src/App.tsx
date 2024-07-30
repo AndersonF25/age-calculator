@@ -26,14 +26,12 @@ function App() {
 
   const date = new Date();
   const atualDay = date.getDate();
-  const atualMonth = date.getMonth() + 1;
-  const atualYear = date.getFullYear();
 
   console.log(atualDay);
 
-  const [day, setDay] = useState<number>(atualDay);
-  const [month, setMonth] = useState<number>(atualMonth);
-  const [year, setYear] = useState<number>(atualYear);
+  const [day, setDay] = useState<number>();
+  const [month, setMonth] = useState<number>();
+  const [year, setYear] = useState<number>();
   const [age, setAge] = useState({ years: 0, months: 0, days: 0 });
   const [showAge, setShowAge] = useState<boolean>(false);
 
@@ -53,33 +51,33 @@ function App() {
       <div className="content">
         <div className="AgeDetails">
           <div className="container-info">
-            <label>Day</label>
             <input
               type="number"
               value={day}
               onChange={(e) => setDay(Number(e.target.value))}
               min={1}
               max={31}
+              placeholder="Dia"
             />
           </div>
           <div className="container-info">
-            <label>Month</label>
             <input
               type="number"
               value={month}
               onChange={(e) => setMonth(Number(e.target.value))}
               min={1}
               max={12}
+              placeholder="Mês"
             />
           </div>
           <div className="container-info">
-            <label>Year</label>
             <input
               type="number"
               value={year}
               onChange={(e) => setYear(Number(e.target.value))}
               min={1900}
               max={2024}
+              placeholder="Ano"
             />
           </div>
         </div>
